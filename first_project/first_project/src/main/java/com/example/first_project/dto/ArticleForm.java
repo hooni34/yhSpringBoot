@@ -2,24 +2,16 @@ package com.example.first_project.dto;
 
 import com.example.first_project.entity.Article;
 import com.example.first_project.repository.ArticleRepository;
+import lombok.AllArgsConstructor;
+import lombok.ToString;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 
+@AllArgsConstructor
+@ToString
 public class ArticleForm {
     private  String title;
     private String content;
-
-    public ArticleForm(String title, String content) {
-        this.title = title;
-        this.content = content;
-    }
-    @Override
-    public String toString() {
-        return "ArticleForm{" +
-                "title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                '}';
-    }
 
     public Article toEntity() {
         // toEntity() 메서드에서는 폼 데이터를 담은 DTO 객체를 엔티티로 반환함 (return new Article();)
