@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @AllArgsConstructor
 @ToString
 public class ArticleForm {
+    private Long id;
     private  String title;
     private String content;
 
