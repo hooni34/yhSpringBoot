@@ -16,7 +16,7 @@ public class ArticleForm {
 
     public Article toEntity() {
         // toEntity() 메서드에서는 폼 데이터를 담은 DTO 객체를 엔티티로 반환함 (return new Article();)
-        return new Article(null, title, content);  // 따라서 전달값을 Article 클래스의 생성자 형식에 맞게 작성하면 됨
+        return new Article(id, title, content);  // 따라서 전달값을 Article 클래스의 생성자 형식에 맞게 작성하면 됨
     }
 
     @Controller

@@ -1,15 +1,15 @@
 {{>layouts/header}}
 
 {{#article}}
-    <form class="container" action="/articles/update" method="post"> // PATCH 말고 POST 쓰는 이유 : <form> 태그가 옛날에 만들어진 규격이라서 GET, POST 메서드만 지원하기 때문
-        <input name="id" type="hidden" value="{{id}}"> // 수정 폼으로 title, content, id(hidden 속성)을 서버에 전송
+    <form class="container" action="/articles/update" method="post">
+        <input name="id" type="hidden" value="{{id}}">
         <div class="mb-3">
             <label class="form-label">제목</label>
-            <input type="text" class="form-control" name="title" value="{{title}}"> // 수정 페이지에 내용 보이기
+            <input type="text" class="form-control" name="title" value="{{title}}">
         </div>
         <div class="mb-3">
             <label class="form-label">내용</label>
-            <textarea class="form-control" rows="3" name="content">{{content}}</textarea> // 수정 페이지에 내용 보이기
+            <textarea class="form-control" rows="3" name="content">{{content}}</textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         <a href="/articles/{{id}}">Back</a>
